@@ -300,29 +300,42 @@ let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 function bigOrSmall(arr) {
-  let answers = [];
-  for (i = 0; i < arr.length; i++) {
+  let answers = []
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] > 100) {
-      answers.push('big')
-    } else if (arr[i] <= 100) {
-      answers.push('small')
+      answers.push("big")
+    } else {
+      answers.push("small")
     }
   }
   return answers
-  let arrayEvaluator = answers
 }
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
+
+console.log("--------------------")
 
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
-let loser = 'Glimmer'
+let loser = 'Marvel'
 /*
   Write a function that is called theEliminator, which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
   The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
 */
 
-//CODE HERE
+function theEliminator(contestants, loser) {
+  for (i = 0; i < contestants.length; i++) {
+    if (contestants[i] === loser) {
+      contestants.splice(i, 1)
+    }
+  }
+  return contestants
+}
+let updatedcontestants = theEliminator(contestants, loser)
+console.log(updatedcontestants)
 
+console.log("--------------------")
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -331,7 +344,12 @@ let sampleString = "Hi, my name is Kylo."
   Invoke the function, passing in the sampleString (above).
 */
 
-//CODE HERE
+function makeUppercase(str) {
+  console.log(str.toUpperCase())
+}
+makeUppercase(sampleString)
+
+console.log("--------------------")
 
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -344,24 +362,52 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+function emailCheck(email) {
+  email = String(email).trim()
+  if (email.includes('@')) {
+    return 'email verfied'
+  } else {
+    return 'must provide a valid email address'
+  }
+}
 
+console.log(emailCheck('email as a string'))
+
+console.log("--------------------")
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
   Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
 */
 
-//CODE HERE
+function manyFrogs(goldSpent) {
+  return goldSpent / 3
+}
+let totalFrogs = manyFrogs(9)
+console.log(totalFrogs)
 
 
+console.log("--------------------")
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
-//CODE HERE
+function manyFrogs2(goldSpent) {
+  if (goldSpent % 3 === 0) {
+    return goldSpent / 3
+  } else if ((goldSpent - 1) % 3 === 0) {
+    return (goldSpent - 1) / 3
+  } else {
+    return (goldSpent - 2) / 3
+  }
+}
 
+let totalFrogs2 = manyFrogs2(100)
 
+console.log(totalFrogs2)
+
+console.log("-------------------------");
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9]
 /*
