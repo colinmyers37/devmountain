@@ -12,7 +12,7 @@ function isPal(str) {
     console.log("false")
    }
 }
-isPal("")
+isPal("racecar")
 
 
 
