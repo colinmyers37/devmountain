@@ -168,7 +168,7 @@ function each(arr, callBack) {
   'The item at index [INDEXPARAM] is [ITEMPARAM].'
 */
 
-// CODE HERE
+
 
 
 each(['Colin', 'him', 'troy'], (logger) => { console.log(`The item at index ${i} is ${logger}`) })
@@ -203,8 +203,8 @@ var users = [
 // Do not edit the code above.
 
 function getUserById(arrUser, id, callback) {
-  for(let i = 0; i < arrUser.length; i++) {
-    if(id === arrUser[i].id) {
+  for (let i = 0; i < arrUser.length; i++) {
+    if (id === arrUser[i].id) {
       callback(arrUser[i])
     }
   }
@@ -216,14 +216,15 @@ function getUserById(arrUser, id, callback) {
 // CHECK YOUR ANSWER
 
 getUserById(users, '16t', user => {
-  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address)
 })
 
+console.log("------------------------------");
 ////////// CHALLENGE //////////
 
 /*
-  You'll be writing a higher order function that returns
-  another function.
+You'll be writing a higher order function that returns
+another function.
 
   Create a function called addingFactory that takes in
   one parameter (it will be a number).
@@ -235,7 +236,11 @@ getUserById(users, '16t', user => {
   the two parameters together and return the sum.
 */
 
-// CODE HERE
+function addingFactory(num) {
+  let addingInner = (numY) => num + numY
+  return addingInner
+}
+
 
 /*
   Now that you have addingFactory, you can create other
@@ -249,7 +254,8 @@ getUserById(users, '16t', user => {
   10 as an arguemnt.
 */
 
-// CODE HERE
+let addingResult = addingFactory()
+let addTen = addingFactory(10)
 
 /*
   Now the inner function is stored in the addTen variable!
@@ -261,8 +267,10 @@ getUserById(users, '16t', user => {
   to see the different outputs.
 */
 
-// CODE HERE
+console.log(addTen(5))
+console.log(addTen(10))
 
+console.log("---------------------")
 /*
   Let's make another function from the addingFactory.
 
@@ -274,7 +282,9 @@ getUserById(users, '16t', user => {
   to add any number to your favorite number!
 */
 
-// CODE HERE
+let addNumber = addingFactory(8)
+
+console.log(addNumber(20))
 
 
 
@@ -289,5 +299,5 @@ getUserById(users, '16t', user => {
 
 
 function first(arr, callback) {
-callback(arr[0])
+  callback(arr[0])
 }
