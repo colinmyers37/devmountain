@@ -200,7 +200,13 @@ console.log(isGlutenFree)
 */
 
 function filterByProperty(property, number, type) {
-    let filtered = []
+    let filteredArr = []
+    if (type === "above") {
+        filteredArr = foodArr.filter((foodObj) => foodObj[property] > number)
+    } else {
+        filteredArr = foodArr.filter((foodObj) => foodObj[property] < number)
+    }
+    return filteredArr
 
 }
 
@@ -212,4 +218,4 @@ function filterByProperty(property, number, type) {
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+console.log(filterByProperty("price", 7, "below"));
