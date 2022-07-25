@@ -1,0 +1,106 @@
+header > h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #CFCCD6;
+
+}
+
+
+header > p {
+    text-align: center;
+    font-size: 1em;
+    margin: 1em;
+    color: #CFCCD6;
+}
+header {
+    background-color: #2f3e76;
+    height: 6em;
+}
+body {
+    background-color: #d4f1f7;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+  .column1 {
+    float: left;
+    width: 33%;
+    padding: 0 10px;
+    margin-top: 4rem;
+  }
+  
+
+  .row {margin: 0 -5px;}
+  
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  .card {
+    height: 20rem;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    padding: 16px;
+    text-align: center;
+    background-color: #fefefe;
+    color: #171f1d;
+    object-fit: fill;
+  }
+  
+
+  @media screen and (max-width: 1000px) {
+    .column1 {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+#tiger-card {
+    background-image: url("./images/tigershark.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+#great-white {
+    background-image: url("./images/greatwhite.webp");
+    background-size: cover;
+    background-position: center;
+}
+#mako {
+    background-image: url("./images/mako.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+#nurse-shark {
+    background-image: url("./images/nurseshark.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+#hammer-head {
+background-image: url("./images/hammerhead1.jpeg");
+background-size: cover;
+background-position: center;
+}
+#whaleshark {
+    background-image: url("./images/whaleshark.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.inner-txt {
+    font-size: 3em;
+}
+
+.card:hover {
+    -moz-border-radius: 30px; -webkit-border-radius: 30px; border-radius: 30px;
+}
