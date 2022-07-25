@@ -1,3 +1,4 @@
+"use strict";
 // function hasMoreVowels(word) {
 //     let vowels = /[aeiou]/gi;
 //     let result = word.match(vowels);
@@ -16,7 +17,7 @@
 
 
 
-const countVowels = (str) => (str.match(/[aeiou]/gi) || []).length > str.length / 2
+const hasMoreVowels = (word) => (word.match(/[aeiou]/gi) || []).length > word.length / 2
 
 
-console.log(countVowels("moon"));
+console.log(hasMoreVowels("mati"));
