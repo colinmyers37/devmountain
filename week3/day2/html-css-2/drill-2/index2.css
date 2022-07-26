@@ -1,0 +1,85 @@
+header {
+  box-sizing: border-box;
+  background-color: white;
+  height: 25vh;
+  margin: 20px;
+  outline: solid black 5px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  height: 30vh;
+  margin: 20px;
+  outline: dotted black 5px;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: solid rgb(50, 50, 50) 1px;
+  box-shadow: 3px 3px 10px black;
+  background-color: white;
+  height: 35vh;
+  width: 65vw;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+#position {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  background-color: white;
+  width: 100vw;
+  height: 25vh;
+}
+#purplebox {
+  background-color: purple;
+  width: 8vw;
+  margin-top: 75px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#greenbox {
+  background-color: green;
+  width: 35vw;
+  margin: 15px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+}
+#circlebox {
+  display: flex;
+  justify-content: left;
+  background-color: white;
+  width: 50vw;
+  margin-right: 125px;
+}
+#bluecircle {
+  background-color: rgb(81, 206, 255);
+  width: 20vw;
+  height: 20vh;
+  border-radius: 50%;
+  margin: 30px;
+}
+#tanbox {
+  background-color: tan;
+  width: 80vw;
+  margin-top: 65px;
+  margin-bottom: 65px;
+  box-shadow: 10px 10px 6px black;
+}
+
+h1 {
+  font-size: 3rem;
+  color: rgb(91, 61, 188);
+  letter-spacing: 10px;
+  font-weight: bold;
+}
