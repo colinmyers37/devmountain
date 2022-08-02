@@ -18,7 +18,7 @@ module.exports = {
     let new_house = {
         id: base_id,
         address,
-        price,
+        price: parseInt(price),
         imageURL
     }
     HOUSES.push(new_house)
@@ -30,11 +30,12 @@ module.exports = {
 let { id } = req.params;
 let { type } = req.body;
 let index = HOUSES.findIndex( houses => houses.id === +id);
-if(HOUSES[index].price === 0 && type === "minus") {
+if(HOUSES[index].price <= 10000 && type === "minus") {
     console.log("Price is too low");
     res.status(405).send(HOUSES);
     return;
 }
 type === "plus" ? HOUSES[index].price += 10000 : HOUSES[index].price -= 10000
+res.status(200).send(HOUSES)
     },
 }
