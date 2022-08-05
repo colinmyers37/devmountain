@@ -20,7 +20,7 @@ const getFortune = () => {
 const booksContainer = document.querySelector('#books-container')
 const form = document.querySelector('form')
 
-const baseURL = `http://localhost:4000/api/books/`
+const baseURL = `http://localhost:4000/api/books`
 
 const booksCallback = ({ data: books }) => displayBooks(books)
 const errCallback = err => console.log(err.response.data)
@@ -53,11 +53,12 @@ function submitHandler(e) {
 function createBookCard(book) {
     const bookCard = document.createElement('div')
     bookCard.classList.add('book-card')
+
     
     bookCard.innerHTML = `<img alt='${book.title}' src=${book.imageURL} class="book-cover"/>
     <p class="book-title">${book.title}</p>
     <div class="btns-container">
-    <button onclick="updateBook(${book.id}, 'minus')">-</button>
+    <button id="minus-btn" onclick="updateBook(${book.id}, 'minus')">-</button>
     <p class="book-rating">${book.rating} stars</p>
     <button onclick="updateBook(${book.id}, 'plus')">+</button>
     </div>
@@ -65,10 +66,10 @@ function createBookCard(book) {
     `
     
     
-    
     booksContainer.appendChild(bookCard)
-}
 
+}
+console.log(createBookCard)
 function displayBooks(arr) {
     booksContainer.innerHTML = ``
     for (let i = 0; i < arr.length; i++) {
@@ -79,7 +80,6 @@ function displayBooks(arr) {
 fortuneBtn.addEventListener('click', getFortune)
 complimentBtn.addEventListener('click', getCompliment)
 form.addEventListener('submit', submitHandler)
-
 getAllBooks()
 
 
