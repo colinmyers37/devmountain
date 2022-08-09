@@ -1,0 +1,86 @@
+Table Ideas:
+
+users table.
+user_id
+name
+useremail
+password
+
+
+recipe table.
+recipe_id
+recipe_name
+instructions
+user_id
+status
+
+ingredients table.
+ingredient_id
+ingredient_name
+
+ingredients_recipes.
+ingredients_recipe_id
+recipe_id
+ingredient_id
+
+
+grocerylist table.
+grocerylist_id
+user_id
+ingredients_recipe_id
+
+
+occasion table.
+occasion_id
+occasion_name
+user_id
+
+occasion_recipes.
+occasion_recipe_id
+recipe_id
+occasion_id
+
+occasion_users.
+occasion_users_id
+user_id
+occasion_id
+
+
+
+Relationships:
+
+Our tables have support tables to help collect specific data.
+
+
+
+Columns:
+
+users.
+We are storing an id which is an integer that incriments automatically and is the primary key to identify each user. we also have their name email and password which helps user sign in.
+
+
+recipes.
+recipes all also have and incrementing id that is the primary key. They also have a name which is a varchar limited to 30 characters. the recipes have a text which is instructions and may be longer. they also have a status which is a boolean because it will determine if the recipe is public or not with true or false. and it takes back a user id in order to identify who made the recipe. 
+
+ingredients.
+ingredients have an id and a name which identifys a specific ingredient..
+
+ingredients_recipe.
+has a ingredients_recipe_id which is incrementing and a recipe id and ingredient_id which link specific ingredients with a specific recipe.
+
+
+grocery list. 
+
+has an incrementing id that is the primary key. It also take in a user id from users to determine whos list it is and a ingredients_recipe which shows specific ingredients for each recipe
+
+occasions.
+have an incrementing id and primary key they also have a name and take in a user_id for whoever created the occasion.
+
+occasion_recipe..
+has an occasion_recipe_id which is a integer and a recipe_id and occasion_id which tells us what recipe was made at what occasion. 
+
+occasion_users.
+has an id occasion_user_id which takes in user_id and occasion_id which tells us what user went to what occasion.
+
+
+
