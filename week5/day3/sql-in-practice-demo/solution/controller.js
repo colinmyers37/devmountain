@@ -1,10 +1,10 @@
-require('dotenv').config()
-const {CONNECTION_STRING} = process.env
+require('dotenv').config();
+const { CONNECTION_STRING } = process.env
 const Sequelize = require('sequelize')
 
 // you wouldn't want to rejectUnauthorized in a production app, but it's great for practice
 const sequelize = new Sequelize(CONNECTION_STRING, {
-    dialect: 'postgres', 
+    dialect: 'postgres',
     dialectOptions: {
         ssl: {
             rejectUnauthorized: false
@@ -24,7 +24,7 @@ module.exports = {
         where u.user_id = ${userId};`)
             .then(dbRes => res.status(200).send(dbRes[0]))
             .catch(err => console.log(err))
-    }, 
+    },
 
     updateUserInfo: (req, res) => {
         let {
@@ -60,10 +60,10 @@ module.exports = {
         order by date desc;`)
             .then(dbRes => res.status(200).send(dbRes[0]))
             .catch(err => console.log(err))
-    }, 
+    },
 
     requestAppointment: (req, res) => {
-        const {date, service} = req.body 
+        const { date, service } = req.body
 
         sequelize.query(`insert into cc_appointments (client_id, date, service_type, notes, approved, completed)
         values (${clientId}, '${date}', '${service}', '', false, false)
