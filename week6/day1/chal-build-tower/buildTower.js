@@ -8,4 +8,4 @@ function createTower(n) {
   return towerArr;
 }
 
-console.log(createTower(5));
+module.exports = createTower;
