@@ -1,0 +1,9 @@
+The basic idea of my website will be a site to calculate your handicap in golf.
+I will take slope rating of the golf course and multiply it by your adjusted gross score - the course rating - the pcc adjustment.
+In this site you will be able to your score from your previous 3 rounds in order to calculate your handicap.
+I will use a post request in order to display the results of the handicap and a put and delete request to update the results or delete the results. 
+
+
+
+figma Link: 
+https://www.figma.com/file/wHKGItNOj4cfUvrBwRsga0/handicap-calculator?node-id=0%3A1
